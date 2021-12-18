@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Scope</display-name>
+    
+    <servlet>
+    	
+    	
+    	<servlet-name>Serv1</servlet-name>
+    	<servlet-class>servlet.Serv1</servlet-class>
+    	
+    	<init-param>
+    		<param-name>nm</param-name>
+    		<param-value>Anees</param-value>    	
+    	</init-param> <!-- Page Scope write after declaration of servlet, scope is till Serv1 -->
+    </servlet>
+    
+    <context-param>
+    	<param-name>WebsiteName</param-name>
+    	<param-value>MyLibrary</param-value>
+    </context-param> <!--App Scope this will work in any pages -->
+    
+    <!-- Consider you have many pages and on every page you are printing somthing,
+    someone who is visiting your site will display that info on every webpage 
+    
+    use this for values that are hard coded on the webpage-->
+    
+    <servlet-mapping>
+    	<servlet-name>Serv1</servlet-name>
+    	<url-pattern>/Serv1</url-pattern>
+    
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>Serv2</servlet-name>
+    	<servlet-class>servlet.Serv2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>Serv2</servlet-name>
+    	<url-pattern>/Serv2</url-pattern>
+    
+    </servlet-mapping>
+    
+
+
+</web-app>

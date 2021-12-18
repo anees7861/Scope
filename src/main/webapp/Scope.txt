@@ -1,0 +1,11 @@
+Different Scopes in Web abb
+
+1. Page Scope - create var which is valid for a page, not outside
+2. Request Scope - send data from one page and other page will catch it 
+3. Session Scope - doesnt have restriction of pages, session data can be used anywhere in any page. Only till browser is on
+4. App scope- save data at app level, in server. it will nto destroy when browser closes. destroys when server closes
+
+
+these are arranged by the limit od their scope
+
+consider that you h
